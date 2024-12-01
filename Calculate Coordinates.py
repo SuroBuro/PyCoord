@@ -26,7 +26,7 @@ def deg_2_rad(deg):
 # Radius at latitude (assuming geoid shape)
 def radius_at_latitude(latitude):
     latitude_rad = deg_2_rad(latitude)
-    return math.sqrt(
+    return equator_radius*math.sqrt(
         (equator_radius**2 * cos(latitude_rad)**2 + polar_radius**2 * sin(latitude_rad)**2)
         / (equator_radius**2 * cos(latitude_rad)**2 + polar_radius**2 * sin(latitude_rad)**2)
     )
